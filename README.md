@@ -1,6 +1,6 @@
 # APP Template iOS
 
-Esse usado para criação de um projeto novo seguindo alguns padrões de desenvolvimento.
+Esse APP é usado para criação de um projeto novo seguindo alguns padrões de desenvolvimento.
 
  - Login com email e senha seguindo padrões OAuth 2.0
  - Login third part Facebook e Google
@@ -12,11 +12,11 @@ Esse usado para criação de um projeto novo seguindo alguns padrões de desenvo
 
 ## Detalhes técnicos
 
--Linguagem: Swift
--Versão minima iOS: 10+
--Arquitetura: VIPER + VM + C
--Gerenciador de dependência: Cocoapods
--Padrões de layout: Material designer
+- Linguagem: Swift
+- Versão minima iOS: 10+
+- Arquitetura: VIPER + VM + C
+- Gerenciador de dependência: Cocoapods
+- Padrões de layout: Material designer
 
 
 ## Utilização
