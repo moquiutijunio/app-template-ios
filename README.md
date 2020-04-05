@@ -66,9 +66,9 @@ chmod u+x appGenerator.sh
     - `Device orientation`
     - `Status Bar Style`
 
-### Aplicação
+## Aplicação
 
-<p align="left">
+<p align="center">
     <img src="https://i.imgur.com/S33Zczd.png" width="200" max-height="50%"/>
     <img src="https://i.imgur.com/0XnzByR.png" width="200" max-height="50%"/>
     <img src="https://i.imgur.com/BOvNaPE.png" width="200" max-height="50%"/>
