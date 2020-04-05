@@ -1,6 +1,6 @@
 # APP Template iOS
 
-Esse APP é usado para criação de um projeto novo seguindo alguns padrões de desenvolvimento.
+Projeto usado para criação de um novo seguindo alguns padrões de desenvolvimento.
 
  - Login com email e senha seguindo padrões OAuth 2.0
  - Login third part Facebook e Google
@@ -53,7 +53,7 @@ chmod u+x appGenerator.sh
     ./generator.sh -https
     ```
 
-### Configurações
+## Configurações
 
 - Em **Assets.xcassets**
     - Adicione o ícone do App em **AppIcon**
