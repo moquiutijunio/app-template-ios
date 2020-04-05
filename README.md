@@ -62,9 +62,15 @@ chmod u+x appGenerator.sh
 - Em **APIClient** altere as URLs base do projeto
 - Em **PROJECT** verifique `iOS Deployment Target`
 - Em **TARGETS** verifique
-    - `Display Name`
-    - `Bundle Identifier`
-    - `Target`
     - `Device`
     - `Device orientation`
     - `Status Bar Style`
+
+### Aplicação
+
+<p align="left">
+    <img src="https://i.imgur.com/S33Zczd.png" width="200" max-height="50%"/>
+    <img src="https://i.imgur.com/0XnzByR.png" width="200" max-height="50%"/>
+    <img src="https://i.imgur.com/BOvNaPE.png" width="200" max-height="50%"/>
+    <img src="https://i.imgur.com/H3O3Em5.png" width="200" max-height="50%"/>
+</p>
