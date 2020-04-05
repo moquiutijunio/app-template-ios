@@ -1,0 +1,80 @@
+/* 
+  Localizable.strings
+  AppTemplateiOS
+
+  Created by Junio Moquiuti on 29/03/20.
+  Copyright © 2020 Junio Moquiuti. All rights reserved.
+*/
+
+// MARK: - Default
+"ok" = "Ok";
+"yes" = "Sim";
+"no" = "Não";
+"save" = "Salvar";
+"create" = "Criar";
+"email" = "Email";
+"add" = "Adicionar";
+"cancel" = "Cancel";
+"camera" = "Camera";
+"roll" = "Rolo";
+"exit" = "Sair";
+"try.again" = "Try Again";
+"image.to.profile" = "Imagem para o seu perfil";
+"delete.current.photo" = "Apagar imagem atual";
+
+// MARK: - Default alert
+"alert.title" = "Ops...";
+"alert.wait" = "Aguarde";
+"alert.loading" = "Carregando...";
+
+// MARK: - Default messages
+"email.not.valid" = "Email não válido";
+"password.value.minimum" = "Senha deve ter no mínimo %@ caracteres";
+"phone.value.minimum" = "Telefone deve ter no mínimo %@ caracteres";
+"message.todo.feature" = "Feature ainda em desenvolvimento :(";
+
+// MARK: - Errors
+"message.generic.error" = "Um erro desconhecido ocorreu";
+"message.expired.session" = "Sessão expirou. Por favor, faça o login novamente";
+"message.authentication.failed" = "A autenticação falhou!";
+"message.photo.access.denied" = "Não foi possível abrir sua galeria. \nPor favor abra seus Ajustes e ative suas permissões";
+"message.camera.access.denied" = "Não foi possível abrir sua camera. \nPor favor abra seus Ajustes e ative suas permissões";
+"message.email.not.valid" = "Email não válido";
+"message.password.value.minimum" = "Senha deve ter no mínimo %@ caracteres";
+"message.cpf.invalid" = "CPF inválido";
+"message.password.not.equal"= "Senhas não conferem";
+
+// MARK: - Login
+"login.sign.in.with" = "Faça login com";
+"login.or" = "Ou";
+"login.pass" = "Senha";
+"login.enter" = "Entrar";
+"login.create.account" = "Criar uma conta";
+"login.forgot.password" = "Esqueci minha senha";
+"login.loging" = "Entrando...";
+"login.loging.with.facebook" = "Entrando com Facebook...";
+"login.loging.with.google" = "Entrando com Google...";
+"login.facebook" = "Facebook";
+"login.google" = "Google";
+"login.facebook.canceled" = "Login com facebook cancelado!";
+"login.facebook.generic.error" = "Não foi possível realizar login com facebook, por favor tente novamente mais tarde!";
+"login.google.generic.error" = "Não foi possível realizar login com google, por favor tente novamente mais tarde!";
+
+// MARK: - Create account
+"create.account.title" = "Cadastro";
+"create.account.seachPhoto" = "Escolher foto";
+"create.account.name" = "Nome Completo";
+"create.account.phone" = "Telefone";
+"create.account.cpf" = "CPF";
+"create.account.password" = "Senha";
+"create.account.confirm.password" = "Confirmar Senha";
+"create.account.finish.register" = "Finalizar Cadastro";
+"create.account.invalid.cpf" = "CPF inválido";
+"create.account.password.not.equal"= "Senhas não conferem";
+
+//ForgotPassword
+"forgot.password.title.nav.bar" = "Esqueci minha senha";
+"forgot.password.title" = "Informe o seu email para recuperar sua senha";
+"forgot.password.send" = "Enviar";
+"forgot.password.check.your.email" = "Verifique seu e-mail";
+"forgot.password.message" = "Você receberá um e-mail com instruções sobre como redefinir sua senha.";
