@@ -28,7 +28,7 @@ Execute o comando no terminal para criar o projeto:
 git clone https://github.com/moquiutijunio/app-template-ios.git
 cd app-template-ios
 chmod u+x appGenerator.sh
-./generator.sh
+./appGenerator.sh
 ```
 
 #### Passo a passo
@@ -49,8 +49,8 @@ chmod u+x appGenerator.sh
 ```
     * Se você `não utiliza SSH` use o seguinte comando
     ```bash
-    chmod u+x generator.sh
-    ./generator.sh -https
+    chmod u+x appGenerator.sh
+    ./appGenerator.sh -https
     ```
 
 ## Configurações
