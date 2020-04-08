@@ -41,7 +41,6 @@ end
 target 'AppTemplateiOSTests' do
   inherit! :search_paths
   
-  pod 'R.swift'
 end
 
 target 'AppTemplateiOSUITests' do
