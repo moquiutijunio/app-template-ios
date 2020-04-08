@@ -1,0 +1,31 @@
+/* 
+  AccessibilityIdentifier.strings
+  AppTemplateiOS
+
+  Created by Junio Moquiuti on 06/04/20.
+  Copyright © 2020 Junio Moquiuti. All rights reserved.
+*/
+
+// MARK: - Alert
+"alert.view" = "Ops...";
+"alert.action" = "Ok";
+"alert.cancel" = "Cancel";
+"alert.try.again" = "Try again";
+
+// MARK: - Login
+"login.email" = "Email";
+"login.password" = "Senha";
+"login.entry.button" = "Entry";
+"login.create.account.button" = "Create account";
+"login.forgot.password.button" = "Forgot password";
+
+// MARK: - Forgot Password
+"forgot.email" = "Email";
+"forgot.send.button" = "Send";
+
+// MARK: - Create account
+"create.account.name" = "Name";
+"create.account.email" = "Email";
+"create.account.password" = "Password";
+"create.account.confirm.password" = "Confirm password";
+"create.account.send.button" = "Create";

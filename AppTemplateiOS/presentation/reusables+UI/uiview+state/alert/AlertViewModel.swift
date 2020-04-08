@@ -47,9 +47,13 @@ struct AlertActionViewModel {
     
     func transform() -> UIAlertAction {
         
-        return UIAlertAction(title: title, style: actionType, handler: { (_) in
+        let alertAction = UIAlertAction(title: title, style: actionType, handler: { (_) in
             guard let action = self.action else { return }
             action()
         })
+        
+        alertAction.accessibilityLabel = R.string.accessibilityIdentifier.alertAction()
+        
+        return alertAction
     }
 }

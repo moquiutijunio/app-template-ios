@@ -18,6 +18,7 @@ protocol ButtonViewModelProtocol {
     var cornerRadius: CGFloat? { get }
     var buttonIsEnable: Driver<Bool> { get }
     var buttonBackgroundColor: UIColor { get }
+    var buttonAccessibilityIdentifier: String? { get }
     var buttonAppearance: RaisedButtonAppearance { get }
     
     func buttonDidTap()
@@ -27,6 +28,7 @@ extension ButtonViewModelProtocol {
     
     var canStayDisable: Bool { return true }
     var cornerRadius: CGFloat? { return nil }
+    var buttonAccessibilityIdentifier: String? { return nil }
 }
 
 final class ButtonCollectionViewCell: BaseCollectionViewCell {
@@ -39,6 +41,7 @@ final class ButtonCollectionViewCell: BaseCollectionViewCell {
         disposeBag = DisposeBag()
         
         backgroundColor = viewModel.buttonBackgroundColor
+        button.accessibilityLabel = viewModel.buttonAccessibilityIdentifier
         button.applyAppearance(viewModel.buttonAppearance,
                                title: viewModel.titleButton,
                                cornerRadius: viewModel.cornerRadius,

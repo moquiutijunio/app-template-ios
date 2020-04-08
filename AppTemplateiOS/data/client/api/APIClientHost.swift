@@ -10,15 +10,15 @@ import Foundation
 
 final class APIClientHost {
     
-    static let apiVersion = "/v1"
+    static let apiVersion = "v1"
     
     #if DEBUG
-    static let baseURLString = "https://staging.dietaetreino.jera.com.br/api\(apiVersion)"
+    static let baseURLString = "http://staging.dietaetreino.jera.com.br"
     #else
-    static let baseURLString = "https://staging.dietaetreino.jera.com.br/api\(apiVersion)"
+    static let baseURLString = "http://staging.dietaetreino.jera.com.br"
     #endif
     
-    static var policies = URL(string: "https://jera.com.br/responsabilidade-social")!
-    static var terms = URL(string: "https://jera.com.br/responsabilidade-social")!
-    static var baseURL = URL(string: "\(baseURLString)")!
+    static var policiesURL = URL(string: "\(baseURLString)/responsabilidade-social")!
+    static var termsURL = URL(string: "\(baseURLString)/responsabilidade-social")!
+    static var baseURL = URL(string: "\(baseURLString)/api/\(apiVersion)")!
 }

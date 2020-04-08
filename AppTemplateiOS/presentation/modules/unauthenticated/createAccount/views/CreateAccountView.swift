@@ -56,21 +56,25 @@ final class CreateAccountView: BaseView {
         avatarImageView.layer.cornerRadius = avatarImageView.bounds.width/2
         avatarImageView.clipsToBounds = true
         
+        nameTextField.accessibilityIdentifier = R.string.accessibilityIdentifier.createAccountName()
         nameTextField.applyAppearance(.main,
                                       placeholder: R.string.localizable.createAccountName(),
                                       autocorrectionType: .no,
                                       hasToolbar: false)
         
+        emailTextField.accessibilityIdentifier = R.string.accessibilityIdentifier.createAccountEmail()
         emailTextField.applyAppearance(.main,
                                        placeholder: R.string.localizable.email(),
                                        autocorrectionType: .no,
                                        keyboardType: .emailAddress,
                                        hasToolbar: false)
         
+        passwordTextField.accessibilityIdentifier = R.string.accessibilityIdentifier.createAccountPassword()
         passwordTextField.applyAppearance(.password,
                                           placeholder: R.string.localizable.createAccountPassword(),
                                           hasToolbar: false)
         
+        confirmPasswordTextField.accessibilityIdentifier = R.string.accessibilityIdentifier.createAccountConfirmPassword()
         confirmPasswordTextField.applyAppearance(.password,
                                                  placeholder: R.string.localizable.createAccountConfirmPassword(),
                                                  hasToolbar: false)
@@ -78,6 +82,7 @@ final class CreateAccountView: BaseView {
         changeAvatarButton.applyAppearance(.main,
                                            title: R.string.localizable.createAccountSeachPhoto().uppercased())
         
+        createAccountButton.accessibilityIdentifier = R.string.accessibilityIdentifier.createAccountSendButton()
         createAccountButton.applyAppearance(.main,
                                             title: R.string.localizable.create().uppercased(),
                                             canStayDisable: true)

@@ -50,11 +50,11 @@ extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Respo
                     do {
                         try SessionManager.shared.updateSession(accessToken: accessToken, currentUser: nil)
                     } catch (let error) {
-                        return Single.error(error)
+                        return .error(error)
                     }
                 }
                 
-                return Single.just(response)
+                return .just(response)
                 
             } else {
                 if response.statusCode == 401 {
@@ -65,37 +65,35 @@ extension PrimitiveSequence where TraitType == SingleTrait, ElementType == Respo
                 case .success(let json):
                     
                     if let errorAPI = ErrorAPI.map(json: json) {
-                        return Single.error(APIClient.error(description: errorAPI.localizedDescription, code: response.statusCode))
+                        return .error(APIClient.error(description: errorAPI.localizedDescription, code: response.statusCode))
                         
                     } else {
-                        return Single.error(APIClient.error(description: R.string.localizable.messageGenericError(), code: response.statusCode))
+                        return .error(APIClient.error(description: R.string.localizable.messageGenericError(), code: response.statusCode))
                     }
                     
                 case .failure(let error):
-                    return Single.error(error)
+                    return .error(error)
                 }
             }
         })
     }
     
-    func updateSession(forceUdpateProfile: Bool = false) -> Single<Moya.Response> {
+    func updateSession() -> Single<Moya.Response> {
         return flatMap { (response) -> Single<Moya.Response> in
             
             if let userAPI = UserAPI.map(data: response.data),
-                let userDB = UserDB.map(userAPI: userAPI),
-                let currentUser = SessionManager.shared.retrieveUserSession()?.currentUser {
+                let userDB = UserDB.map(userAPI: userAPI) {
                 
                 do {
-                    try SessionManager.shared.createUserSession(accessToken: userAPI.token ?? currentUser.token, currentUser: userDB)
-                    return Single.just(response)
+                    try SessionManager.shared.createUserSession(accessToken: userAPI.token, currentUser: userDB)
+                    return .just(response)
                     
                 } catch(let error) {
-                    return Single.error(error)
+                    return .error(error)
                 }
-                
             }
             
-            return Single.error(APIClient.error(description: R.string.localizable.messageGenericError(), code: response.statusCode))
+            return .error(APIClient.error(description: R.string.localizable.messageGenericError(), code: response.statusCode))
         }
     }
 }

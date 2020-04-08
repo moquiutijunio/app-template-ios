@@ -10,6 +10,7 @@ import Foundation
 import FirebaseAnalytics
 
 enum EventTypes {
+    case login
     
     var name: String {
         switch self {

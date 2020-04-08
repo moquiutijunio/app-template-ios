@@ -75,8 +75,16 @@ extension ForgotPasswordSectionModel: TextFieldViewModelProtocol {
         return .clear
     }
     
+    var fieldAccessibilityIdentifier: String? {
+        return R.string.accessibilityIdentifier.forgotEmail()
+    }
+    
     var textFieldAppearance: TextFieldAppearance {
         return .main
+    }
+    
+    var hasToolbar: Bool {
+        return false
     }
 }
 
@@ -93,6 +101,10 @@ extension ForgotPasswordSectionModel: ButtonViewModelProtocol {
     
     var buttonAppearance: RaisedButtonAppearance {
         return .main
+    }
+    
+    var buttonAccessibilityIdentifier: String? {
+        return R.string.accessibilityIdentifier.forgotSendButton()
     }
     
     func buttonDidTap() {

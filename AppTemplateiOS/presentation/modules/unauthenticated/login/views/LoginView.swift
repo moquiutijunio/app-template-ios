@@ -77,23 +77,28 @@ final class LoginView: BaseView {
         facebookButton.applyAppearance(.facebook)
         googleButton.applyAppearance(.google)
         
+        loginButton.accessibilityIdentifier = R.string.accessibilityIdentifier.loginEntryButton()
         loginButton.applyAppearance(.main,
                                     title: R.string.localizable.loginEnter().uppercased(),
                                     canStayDisable: true)
         
+        emailTextField.accessibilityIdentifier = R.string.accessibilityIdentifier.loginEmail()
         emailTextField.applyAppearance(.main,
                                        placeholder: R.string.localizable.email(),
                                        autocorrectionType: .no,
                                        keyboardType: .emailAddress,
                                        hasToolbar: false)
         
+        passwordTextField.accessibilityIdentifier = R.string.accessibilityIdentifier.loginPassword()
         passwordTextField.applyAppearance(.password,
                                           placeholder: R.string.localizable.loginPass(),
                                           hasToolbar: false)
         
+        createAccountButton.accessibilityIdentifier = R.string.accessibilityIdentifier.loginCreateAccountButton()
         createAccountButton.applyAppearance(.main,
                                             title: R.string.localizable.loginCreateAccount())
         
+        forgotPasswordButton.accessibilityIdentifier = R.string.accessibilityIdentifier.loginForgotPasswordButton()
         forgotPasswordButton.applyAppearance(.main,
                                              title: R.string.localizable.loginForgotPassword())
         

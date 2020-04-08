@@ -23,6 +23,9 @@ protocol TextFieldViewModelProtocol {
     var textFieldAlignment: NSTextAlignment { get }
     var textFieldErrorString: Driver<String?> { get }
     var textFieldAppearance: TextFieldAppearance { get }
+    var fieldAccessibilityIdentifier: String? { get }
+    var hasToolbar: Bool { get }
+    var toolbarAction: (() -> ()) { get }
     
     func textDidEndEditing()
 }
@@ -36,7 +39,10 @@ extension TextFieldViewModelProtocol {
     var textViewBackgroundColor: UIColor { return .clear }
     var textFieldAlignment: NSTextAlignment { return .left }
     var keyboardType: UIKeyboardType { return .default }
+    var fieldAccessibilityIdentifier: String? { return nil }
     var textFieldErrorString: Driver<String?> { return .just(nil) }
+    var hasToolbar: Bool { return true }
+    var toolbarAction: (() -> ()) { {} }
     func textDidEndEditing() {}
 }
 
@@ -55,11 +61,14 @@ final class TextFieldCollectionViewCell: BaseCollectionViewCell {
     func populateWith(viewModel: TextFieldViewModelProtocol) {
         disposeBag = DisposeBag()
         
+        textField.accessibilityLabel = viewModel.fieldAccessibilityIdentifier
         textField.applyAppearance(viewModel.textFieldAppearance,
                                   placeholder: viewModel.textFieldPlaceholder,
                                   cornerRadius: viewModel.textFieldCornerRadius,
                                   textAlignment: viewModel.textFieldAlignment,
-                                  keyboardType: viewModel.keyboardType)
+                                  keyboardType: viewModel.keyboardType,
+                                  hasToolbar: viewModel.hasToolbar,
+                                  toolbarAction: viewModel.toolbarAction)
         
         textField.isEnabled = viewModel.textFieldIsEnabled
         backgroundColor = viewModel.textViewBackgroundColor

@@ -34,14 +34,18 @@ target 'AppTemplateiOS' do
   pod 'Moya/RxSwift'
   
   #Third SDK
-  pod 'GoogleSignIn', '~> 4.0.0'
+  pod 'GoogleSignIn', '~> 4.3.0'
   pod 'FacebookSDK/LoginKit', '~> 5.2.2'
+end
 
-  target 'AppTemplateiOSTests' do
-    # Pods for testing
-  end
+target 'AppTemplateiOSTests' do
+  inherit! :search_paths
   
-  target 'AppTemplateiOSUITests' do
-    # Pods for testing
-  end
+  pod 'R.swift'
+end
+
+target 'AppTemplateiOSUITests' do
+  inherit! :search_paths
+  
+  pod 'R.swift'
 end

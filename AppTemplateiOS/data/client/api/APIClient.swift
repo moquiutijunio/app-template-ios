@@ -31,6 +31,7 @@ final class APIClient: APIClientProtocol {
         return provider.rx
             .request(.sighIn(email: email, password: password, token: token))
             .processResponse()
+            .updateSession()
             .map(UserAPI.self)
     }
     
@@ -38,6 +39,7 @@ final class APIClient: APIClientProtocol {
         return provider.rx
             .request(.sighInFacebook(facebookToken: fcToken, firebaseToken: firebaseToken))
             .processResponse()
+            .updateSession()
             .map(UserAPI.self)
     }
     
@@ -45,6 +47,7 @@ final class APIClient: APIClientProtocol {
         return provider.rx
             .request(.sighInGoogle(googleToken: ggToken, firebaseToken: firebaseToken))
             .processResponse()
+            .updateSession()
             .map(UserAPI.self)
     }
     
@@ -52,6 +55,7 @@ final class APIClient: APIClientProtocol {
         return provider.rx
             .request(.sighInApple(email: email, fullName: fullName, firebaseToken: firebaseToken))
             .processResponse()
+            .updateSession()
             .map(UserAPI.self)
     }
     
@@ -59,6 +63,7 @@ final class APIClient: APIClientProtocol {
         return provider.rx
             .request(.createAccount(request: request))
             .processResponse()
+            .updateSession()
             .map { _ in }
     }
     
