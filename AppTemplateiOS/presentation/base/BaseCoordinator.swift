@@ -6,7 +6,7 @@
 //  Copyright © 2020 Junio Moquiuti. All rights reserved.
 //
 
-import UIKit //TODO organizar essa merda aqui depois
+import UIKit 
 
 protocol BaseCoordinatorCallbackProtocol: AnyObject {
     

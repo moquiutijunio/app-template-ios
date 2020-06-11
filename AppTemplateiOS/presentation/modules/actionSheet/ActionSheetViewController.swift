@@ -49,17 +49,17 @@ final class ActionSheetViewController: BaseViewController {
         footerContainerView.backgroundColor = .clear
         topView.backgroundColor = .customBlack(alpha: 0.5)
         
-//        topView.rx //TODO
-//            .tapGesture()
-//            .when(.recognized)
-//            .bind { [presenter = presenter] (_) in presenter.didTapOutsideBottomView() }
-//            .disposed(by: disposeBag)
-//
-//        topView.rx
-//            .swipeGesture([.down])
-//            .when(.recognized)
-//            .bind { [presenter = presenter] (_) in presenter.didTapOutsideBottomView() }
-//            .disposed(by: disposeBag)
+        topView.rx
+            .tapGesture()
+            .when(.recognized)
+            .bind { [presenter = presenter] (_) in presenter.didTapOutsideBottomView() }
+            .disposed(by: disposeBag)
+        
+        topView.rx
+            .swipeGesture([.down])
+            .when(.recognized)
+            .bind { [presenter = presenter] (_) in presenter.didTapOutsideBottomView() }
+            .disposed(by: disposeBag)
         
         listenToKeyboard()
     }

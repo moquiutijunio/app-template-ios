@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxGesture
 
 protocol ErrorCollectionViewModelProtocol {
     
@@ -45,9 +46,10 @@ final class ErrorCollectionViewCell: BaseCollectionViewCell {
         
         messageLabel.text = viewModel.message
         
-//        self.rx.tap //TODO
-//            .bind { _ in viewModel.tryAgainDidTap() }
-//            .disposed(by: disposeBag)
+        self.rx.tapGesture()
+            .when(.recognized)
+            .bind { _ in viewModel.tryAgainDidTap() }
+            .disposed(by: disposeBag)
         
         self.viewModel = viewModel
     }
