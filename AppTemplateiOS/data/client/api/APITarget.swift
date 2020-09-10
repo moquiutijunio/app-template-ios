@@ -57,7 +57,7 @@ extension APITarget: TargetType {
         //MARK: - Authentication
         case .sighIn: return "users/login"
         case .sighInFacebook: return "users/facebook_auth"
-        case .sighInGoogle: return "uers/google_auth"
+        case .sighInGoogle: return "users/google_auth"
         case .sighInApple: return "users/apple_auth"
         case .createAccount: return "users"
         case .forgotPassword: return "users/recover_password"
