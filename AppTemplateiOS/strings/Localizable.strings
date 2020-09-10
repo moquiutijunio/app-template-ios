@@ -19,8 +19,10 @@
 "roll" = "Rolo";
 "exit" = "Sair";
 "try.again" = "Try Again";
+"update" = "Atualizar";
 "image.to.profile" = "Imagem para o seu perfil";
 "delete.current.photo" = "Apagar imagem atual";
+"revoked.session" = "Sessão revogada pelo ID Apple";
 
 // MARK: - Default alert
 "alert.title" = "Ops...";
@@ -44,6 +46,15 @@
 "message.cpf.invalid" = "CPF inválido";
 "message.password.not.equal"= "Senhas não conferem";
 
+// MARK: - Version
+"version.alert.title" = "Nova Versão Disponível";
+"version.alert.body" = "Existe uma versão mais recente disponível para download! Atualize o aplicativo visitando a Apple Store.";
+
+// MARK: - Image Picker
+"image.picker.title" = "Selecione uma opção";
+"image.picker.camera" = "Câmera";
+"image.picker.library" = "Galeria";
+
 // MARK: - Login
 "login.sign.in.with" = "Faça login com";
 "login.or" = "Ou";
@@ -59,6 +70,7 @@
 "login.facebook.canceled" = "Login com facebook cancelado!";
 "login.facebook.generic.error" = "Não foi possível realizar login com facebook, por favor tente novamente mais tarde!";
 "login.google.generic.error" = "Não foi possível realizar login com google, por favor tente novamente mais tarde!";
+"login.apple.generic.error" = "Não foi possível realizar login com Apple, por favor tente novamente mais tarde!";
 
 // MARK: - Create account
 "create.account.title" = "Cadastro";

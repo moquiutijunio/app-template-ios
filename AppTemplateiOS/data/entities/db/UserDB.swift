@@ -11,18 +11,21 @@ import Foundation
 class UserDB: NSObject, NSCoding {
     
     var id: Int
+    var uid: String?
     var name: String?
     var email: String
     var token: String?
     var image: String?
     
     init(id: Int,
+         uid: String?,
          name: String?,
          email: String,
          token: String?,
          image: String?) {
         
         self.id = id
+        self.uid = uid
         self.name = name
         self.email = email
         self.token = token
@@ -35,11 +38,13 @@ class UserDB: NSObject, NSCoding {
         guard let email = aDecoder.decodeObject(forKey: "email") as? String else { return nil }
             
         let id = aDecoder.decodeInteger(forKey: "id")
+        let uid = aDecoder.decodeObject(forKey: "uid") as? String
         let name = aDecoder.decodeObject(forKey: "name") as? String
         let token = aDecoder.decodeObject(forKey: "token") as? String
         let image = aDecoder.decodeObject(forKey: "image") as? String
         
         self.init(id: id,
+                  uid: uid,
                   name: name,
                   email: email,
                   token: token,
@@ -49,6 +54,7 @@ class UserDB: NSObject, NSCoding {
     func encode(with aCoder: NSCoder) {
         
         aCoder.encode(id, forKey: "id")
+        aCoder.encode(uid, forKey: "uid")
         aCoder.encode(name, forKey: "name")
         aCoder.encode(email, forKey: "email")
         aCoder.encode(token, forKey: "token")
@@ -66,6 +72,7 @@ extension UserDB {
         }
         
         return UserDB(id: id,
+                      uid: userAPI.uid,
                       name: userAPI.name,
                       email: email,
                       token: userAPI.token,
@@ -78,6 +85,7 @@ extension UserDB {
         }
         
         return UserDB(id: user.id,
+                      uid: user.uid,
                       name: user.name,
                       email: user.email,
                       token: user.token,

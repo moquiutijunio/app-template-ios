@@ -8,7 +8,6 @@ target 'AppTemplateiOS' do
   pod 'R.swift'
   pod 'SwiftLint'
   pod 'Kingfisher'
-  pod 'YangMingShan'
   pod 'INSPullToRefresh'
   pod 'IGListKit', '~> 3.2' #OBJC
   

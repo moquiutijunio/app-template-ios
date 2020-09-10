@@ -13,7 +13,7 @@ import IGListKit
 
 protocol CreateAccountRouterProtocol: AnyObject {
     
-    func goToPhotoPickerView(_ type: PhotoPickerType)
+    func goToPhotoPickerView(_ origin: PhotoPickerOrigin, sourceView: UIView)
 }
 
 final class CreateAccountPresenter: BasePresenter {
@@ -111,8 +111,8 @@ extension CreateAccountPresenter: CreateAccountViewModelProtocol {
             .asDriver(onErrorJustReturn: nil)
     }
     
-    func avatarDidTap() {
-        router?.goToPhotoPickerView(.createAccount)
+    func avatarDidTap(sourceView: UIView) {
+        router?.goToPhotoPickerView(.createAccount, sourceView: sourceView)
     }
     
     func createAccountButtonDidTap() {

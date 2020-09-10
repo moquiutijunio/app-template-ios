@@ -11,6 +11,7 @@ import Foundation
 struct UserAPI: Codable {
 
     var id: Int?
+    var uid: String?
     var name: String?
     var email: String?
     var token: String?
@@ -18,6 +19,7 @@ struct UserAPI: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id
+        case uid
         case name
         case email
         case token

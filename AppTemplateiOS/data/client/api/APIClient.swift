@@ -21,6 +21,10 @@ protocol APIClientProtocol {
     func logout() -> Single<Void>
     
     // MARK: - Dashboard
+    
+    // MARK: - Others
+    func registerToken(token: String) -> Single<Void>
+    func version() -> Single<VersionAPI>
 }
 
 final class APIClient: APIClientProtocol {
@@ -82,4 +86,18 @@ final class APIClient: APIClientProtocol {
     }
     
     // MARK: - Dashboard
+    
+    // MARK: - Others
+    func registerToken(token: String) -> Single<Void> {
+        return provider.rx
+            .request(.registerToken(token: token))
+            .processResponse()
+            .map { _ in }
+    }
+    
+    func version() -> Single<VersionAPI> {
+       return provider.rx
+          .request(.appVersion)
+          .map(VersionAPI.self)
+    }
 }

@@ -11,7 +11,7 @@ import UIKit
 class BaseNavigableCoordinator: BaseCoordinator {
     
     internal var navigationController = BaseNavigationController()
-    internal var photoPickerType: PhotoPickerType!
+    internal var photoPickerOrigin: PhotoPickerOrigin!
     
     init(callback: BaseCoordinatorCallbackProtocol?) {
         super.init()

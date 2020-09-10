@@ -19,14 +19,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        //Setups
+        print("TODO *** Descomentar FirebaseApp.configure() quando configurar Firebase ***")
 //        FirebaseApp.configure()
         
+        //Handlers
+        if #available(iOS 13.0, *) { SingInAppleHandler.shared.checkCredential() }
+        AppVersionHandler.shared.checkVersion()
+        
+        //Coordinator
         let window = UIWindow(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator(window: window)
         appCoordinator?.start()
         self.window = window
         
         return true
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        
+        if #available(iOS 13.0, *) {
+            SingInAppleHandler.shared.checkCredential()
+        }
     }
 
     // MARK: UISceneSession Lifecycle

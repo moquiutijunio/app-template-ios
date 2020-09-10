@@ -151,9 +151,6 @@ PODS:
     - RxSwift (~> 4.5)
   - RxSwift (4.5.0)
   - SwiftLint (0.38.0)
-  - YangMingShan (2.0.1):
-    - YangMingShan/YMSPhotoPicker (= 2.0.1)
-  - YangMingShan/YMSPhotoPicker (2.0.1)
 
 DEPENDENCIES:
   - Cartography
@@ -174,7 +171,6 @@ DEPENDENCIES:
   - RxGesture
   - RxSwift
   - SwiftLint
-  - YangMingShan
 
 SPEC REPOS:
   trunk:
@@ -216,7 +212,6 @@ SPEC REPOS:
     - RxGesture
     - RxSwift
     - SwiftLint
-    - YangMingShan
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -257,8 +252,7 @@ SPEC CHECKSUMS:
   RxGesture: c1b7bf17166b0ef9d642a9510f8bac5785f18990
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftLint: 4105f061f9812b214568b736dab580ab2c73a582
-  YangMingShan: 561cfbb769e8cf679d3f23d8ae7030402ddb6495
 
-PODFILE CHECKSUM: 6acdf86c1f4bf25eff151f9eb5f561d0e2603899
+PODFILE CHECKSUM: 680983829fae440ed847e9c31c21650f903c89c8
 
 COCOAPODS: 1.9.1

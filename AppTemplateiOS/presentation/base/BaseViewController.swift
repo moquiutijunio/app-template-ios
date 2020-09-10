@@ -339,7 +339,7 @@ extension BaseViewController {
 // MARK: - AlertViewModel
 extension BaseViewController {
     
-    private func buidlAlertWith(viewModel: AlertViewModel) {
+    func buidlAlertWith(viewModel: AlertViewModel) {
         let alert = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: viewModel.preferredStyle)
         
         //Trating when alert is showing in the iPad

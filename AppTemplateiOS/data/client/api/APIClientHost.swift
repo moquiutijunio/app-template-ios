@@ -8,17 +8,20 @@
 
 import Foundation
 
-final class APIClientHost {
-    
-    static let apiVersion = "v1"
-    
+enum APIVersion {
+    case v1
+}
+
+final class APPHosts {
+        
     #if DEBUG
-    static let baseURLString = "http://staging.dietaetreino.jera.com.br"
+    static let domainURL = "staging.dietaetreino.jera.com.br"
     #else
-    static let baseURLString = "http://staging.dietaetreino.jera.com.br"
+    static let domainURL = "staging.dietaetreino.jera.com.br"
     #endif
     
-    static var policiesURL = URL(string: "\(baseURLString)/responsabilidade-social")!
-    static var termsURL = URL(string: "\(baseURLString)/responsabilidade-social")!
-    static var baseURL = URL(string: "\(baseURLString)/api/\(apiVersion)")!
+    static var baseURLString = "http://\(domainURL)/api"
+    static var appURL = URL(string: "itms-apps://itunes.apple.com/app/XXXXXX")! //TODO
+    static var termsURL = URL(string: "http://\(domainURL)/responsabilidade-social")! //TODO
+    static var policiesURL = URL(string: "http://\(domainURL)/responsabilidade-social")! //TODO
 }

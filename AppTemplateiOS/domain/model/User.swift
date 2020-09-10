@@ -11,6 +11,7 @@ import Foundation
 struct User {
     
     var id: Int
+    var uid: String?
     var name: String?
     var email: String
     var token: String?
@@ -32,6 +33,7 @@ extension User {
         }
         
         return User(id: id,
+                    uid: user.uid,
                     name: user.name,
                     email: email,
                     token: user.token,
@@ -46,6 +48,7 @@ extension User {
         }
         
         return User(id: user.id,
+                    uid: user.uid,
                     name: user.name,
                     email: user.email,
                     token: user.token,
@@ -55,5 +58,12 @@ extension User {
     static func mapArray(users: [UserAPI]) -> [User] {
         return users
             .compactMap { User.map(user: $0) }
+    }
+    
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.id == rhs.id &&
+            lhs.name == rhs.name &&
+            lhs.email == rhs.email &&
+            lhs.image == rhs.image
     }
 }

@@ -92,7 +92,7 @@
 		F09DB48E242BBD6500DAC560 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09DB48D242BBD6500DAC560 /* BaseCoordinator.swift */; };
 		F09DB490242BBDB000DAC560 /* BaseNavigableCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09DB48F242BBDB000DAC560 /* BaseNavigableCoordinator.swift */; };
 		F09DB492242BBDE700DAC560 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09DB491242BBDE700DAC560 /* BaseNavigationController.swift */; };
-		F09DB494242BBE5A00DAC560 /* BaseNavigableCoordinator+YMSPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09DB493242BBE5A00DAC560 /* BaseNavigableCoordinator+YMSPhotoPicker.swift */; };
+		F09DB494242BBE5A00DAC560 /* BaseNavigableCoordinator+UIImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09DB493242BBE5A00DAC560 /* BaseNavigableCoordinator+UIImagePicker.swift */; };
 		F09DB496242BBF0100DAC560 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09DB495242BBF0100DAC560 /* BasePresenter.swift */; };
 		F09DB498242BBF3D00DAC560 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09DB497242BBF3D00DAC560 /* BaseViewController.swift */; };
 		F09DB49A242BC05100DAC560 /* BaseColletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09DB499242BC05100DAC560 /* BaseColletionViewController.swift */; };
@@ -132,6 +132,11 @@
 		F09DB523242E861000DAC560 /* TextSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09DB522242E861000DAC560 /* TextSectionController.swift */; };
 		F09DB526242E867100DAC560 /* TextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09DB524242E867100DAC560 /* TextCollectionViewCell.swift */; };
 		F09DB527242E867100DAC560 /* TextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F09DB525242E867100DAC560 /* TextCollectionViewCell.xib */; };
+		F0A8F22E250A6C89004216E8 /* VersionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A8F22D250A6C89004216E8 /* VersionAPI.swift */; };
+		F0A8F230250A6D24004216E8 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A8F22F250A6D24004216E8 /* Version.swift */; };
+		F0A8F233250A70FA004216E8 /* SingInAppleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A8F232250A70FA004216E8 /* SingInAppleHandler.swift */; };
+		F0A8F235250A73B0004216E8 /* AppVersionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A8F234250A73B0004216E8 /* AppVersionHandler.swift */; };
+		F0A8F237250A7E29004216E8 /* PhotoPickerOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A8F236250A7E29004216E8 /* PhotoPickerOrigin.swift */; };
 		F0DEDE2924375CBA00EC2C30 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0DEDE2824375CBA00EC2C30 /* credentials.plist */; };
 		F0DEDE2C2437666C00EC2C30 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEDE2B2437666C00EC2C30 /* DashBoardViewController.swift */; };
 		F0DEDE3124376A1800EC2C30 /* ForgotPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DEDE3024376A1800EC2C30 /* ForgotPasswordInteractor.swift */; };
@@ -257,7 +262,7 @@
 		F09DB48D242BBD6500DAC560 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		F09DB48F242BBDB000DAC560 /* BaseNavigableCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigableCoordinator.swift; sourceTree = "<group>"; };
 		F09DB491242BBDE700DAC560 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		F09DB493242BBE5A00DAC560 /* BaseNavigableCoordinator+YMSPhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseNavigableCoordinator+YMSPhotoPicker.swift"; sourceTree = "<group>"; };
+		F09DB493242BBE5A00DAC560 /* BaseNavigableCoordinator+UIImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseNavigableCoordinator+UIImagePicker.swift"; sourceTree = "<group>"; };
 		F09DB495242BBF0100DAC560 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		F09DB497242BBF3D00DAC560 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F09DB499242BC05100DAC560 /* BaseColletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColletionViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +302,11 @@
 		F09DB522242E861000DAC560 /* TextSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionController.swift; sourceTree = "<group>"; };
 		F09DB524242E867100DAC560 /* TextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCollectionViewCell.swift; sourceTree = "<group>"; };
 		F09DB525242E867100DAC560 /* TextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCollectionViewCell.xib; sourceTree = "<group>"; };
+		F0A8F22D250A6C89004216E8 /* VersionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionAPI.swift; sourceTree = "<group>"; };
+		F0A8F22F250A6D24004216E8 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		F0A8F232250A70FA004216E8 /* SingInAppleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInAppleHandler.swift; sourceTree = "<group>"; };
+		F0A8F234250A73B0004216E8 /* AppVersionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionHandler.swift; sourceTree = "<group>"; };
+		F0A8F236250A7E29004216E8 /* PhotoPickerOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerOrigin.swift; sourceTree = "<group>"; };
 		F0DEDE2824375CBA00EC2C30 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		F0DEDE2B2437666C00EC2C30 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		F0DEDE3024376A1800EC2C30 /* ForgotPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordInteractor.swift; sourceTree = "<group>"; };
@@ -615,6 +625,8 @@
 			isa = PBXGroup;
 			children = (
 				F09DB46D242BAE7C00DAC560 /* User.swift */,
+				F0A8F22F250A6D24004216E8 /* Version.swift */,
+				F0A8F236250A7E29004216E8 /* PhotoPickerOrigin.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -622,6 +634,7 @@
 		F09DB458242BA85B00DAC560 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				F0A8F231250A70AC004216E8 /* handlers */,
 				F0E7822424340D4F008CECFA /* FieldErrors.swift */,
 				F09DB475242BAF4500DAC560 /* Error+Extensions.swift */,
 				F09DB46F242BAEC700DAC560 /* Domain+Helper.swift */,
@@ -694,7 +707,7 @@
 				F09DB48D242BBD6500DAC560 /* BaseCoordinator.swift */,
 				F09DB48F242BBDB000DAC560 /* BaseNavigableCoordinator.swift */,
 				F09DB491242BBDE700DAC560 /* BaseNavigationController.swift */,
-				F09DB493242BBE5A00DAC560 /* BaseNavigableCoordinator+YMSPhotoPicker.swift */,
+				F09DB493242BBE5A00DAC560 /* BaseNavigableCoordinator+UIImagePicker.swift */,
 				F09DB495242BBF0100DAC560 /* BasePresenter.swift */,
 				F09DB497242BBF3D00DAC560 /* BaseViewController.swift */,
 				F045B62F24316775005A071A /* BaseScrollViewController.swift */,
@@ -754,6 +767,7 @@
 			children = (
 				F09DB465242BA99F00DAC560 /* UserAPI.swift */,
 				F09DB467242BA9AE00DAC560 /* ErrorAPI.swift */,
+				F0A8F22D250A6C89004216E8 /* VersionAPI.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -933,6 +947,15 @@
 				F09DB4A6242BC2C600DAC560 /* pullToRefresh */,
 			);
 			path = defaults;
+			sourceTree = "<group>";
+		};
+		F0A8F231250A70AC004216E8 /* handlers */ = {
+			isa = PBXGroup;
+			children = (
+				F0A8F232250A70FA004216E8 /* SingInAppleHandler.swift */,
+				F0A8F234250A73B0004216E8 /* AppVersionHandler.swift */,
+			);
+			path = handlers;
 			sourceTree = "<group>";
 		};
 		F0DEDE2A2437665000EC2C30 /* dashboard */ = {
@@ -1320,6 +1343,7 @@
 				F045B5E9242E9407005A071A /* ActionSheetViewController.swift in Sources */,
 				F045B5DE242E923E005A071A /* ContainerPresenter.swift in Sources */,
 				F09DB4FF242E808600DAC560 /* ErrorSectionModel.swift in Sources */,
+				F0A8F237250A7E29004216E8 /* PhotoPickerOrigin.swift in Sources */,
 				F09DB466242BA99F00DAC560 /* UserAPI.swift in Sources */,
 				F09DB49A242BC05100DAC560 /* BaseColletionViewController.swift in Sources */,
 				F045B63024316776005A071A /* BaseScrollViewController.swift in Sources */,
@@ -1341,10 +1365,13 @@
 				F045B5D6242E9182005A071A /* BaseRepository.swift in Sources */,
 				F09DB492242BBDE700DAC560 /* BaseNavigationController.swift in Sources */,
 				F09DB51A242E83FA00DAC560 /* ButtonSectionController.swift in Sources */,
+				F0A8F233250A70FA004216E8 /* SingInAppleHandler.swift in Sources */,
+				F0A8F230250A6D24004216E8 /* Version.swift in Sources */,
 				F045B5D2242E90BD005A071A /* UserSessionDataStore.swift in Sources */,
 				F045B601242EE8AE005A071A /* APIOperators.swift in Sources */,
 				F09DB511242E830700DAC560 /* LoadingSectionController.swift in Sources */,
 				F08ACE8324377B7D009D2928 /* ForgotPasswordSectionController.swift in Sources */,
+				F0A8F22E250A6C89004216E8 /* VersionAPI.swift in Sources */,
 				F045B5D8242E9197005A071A /* SessionRepository.swift in Sources */,
 				F09DB50C242E823500DAC560 /* EmptyCollectionViewCell.swift in Sources */,
 				F09DB514242E831F00DAC560 /* LoadingCollectionViewCell.swift in Sources */,
@@ -1356,6 +1383,7 @@
 				F09DB48E242BBD6500DAC560 /* BaseCoordinator.swift in Sources */,
 				F09DB4A0242BC0E100DAC560 /* BaseCollectionReusableView.swift in Sources */,
 				F0E7822724340F02008CECFA /* CPFValidator.swift in Sources */,
+				F0A8F235250A73B0004216E8 /* AppVersionHandler.swift in Sources */,
 				F045B5D0242E909A005A071A /* SessionManager.swift in Sources */,
 				F09DB478242BAFD500DAC560 /* NotificationManager.swift in Sources */,
 				F0DEDE3124376A1800EC2C30 /* ForgotPasswordInteractor.swift in Sources */,
@@ -1379,7 +1407,7 @@
 				F09DB488242BB76100DAC560 /* Material+Extensions.swift in Sources */,
 				F09DB47C242BB07E00DAC560 /* BaseInteractor.swift in Sources */,
 				F045B613242EF1C4005A071A /* AuthenticationCoordinator.swift in Sources */,
-				F09DB494242BBE5A00DAC560 /* BaseNavigableCoordinator+YMSPhotoPicker.swift in Sources */,
+				F09DB494242BBE5A00DAC560 /* BaseNavigableCoordinator+UIImagePicker.swift in Sources */,
 				F09DB496242BBF0100DAC560 /* BasePresenter.swift in Sources */,
 				F09DB46C242BA9EE00DAC560 /* UserSessionDB.swift in Sources */,
 				F045B5EC242E948C005A071A /* ActionSheetPresentationManager.swift in Sources */,

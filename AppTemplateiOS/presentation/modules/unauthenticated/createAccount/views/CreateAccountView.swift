@@ -27,7 +27,7 @@ protocol CreateAccountViewModelProtocol {
     var passwordErrorString: Driver<String?> { get }
     var confirmPasswordErrorString: Driver<String?> { get }
     
-    func avatarDidTap()
+    func avatarDidTap(sourceView: UIView)
     func createAccountButtonDidTap()
 }
 
@@ -144,8 +144,14 @@ final class CreateAccountView: BaseView {
             .drive(createAccountButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
+        avatarImageView.rx
+            .tapGesture()
+            .when(.recognized)
+            .bind { [unowned self] _ in viewModel.avatarDidTap(sourceView: self.avatarImageView) }
+            .disposed(by: disposeBag)
+        
         changeAvatarButton.rx.tap
-            .bind { _ in viewModel.avatarDidTap() }
+            .bind { [unowned self] _ in viewModel.avatarDidTap(sourceView: self.changeAvatarButton) }
             .disposed(by: disposeBag)
         
         createAccountButton.rx.tap

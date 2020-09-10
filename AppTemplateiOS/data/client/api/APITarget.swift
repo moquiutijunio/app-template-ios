@@ -39,33 +39,42 @@ enum APITarget {
     case logout
     
     //MARK: - Dashboard
+    
+    // MARK: - Others
+    case registerToken(token: String)
+    case appVersion
 }
 
 extension APITarget: TargetType {
     
     var baseURL: URL {
-        return APIClientHost.baseURL as URL
+        return URL(string: "\(APPHosts.baseURLString)/\(APIVersion.v1)/")!
     }
     
     var path: String {
         switch self {
             
         //MARK: - Authentication
-        case .sighIn: return "/users/login"
-        case .sighInFacebook: return "/users/facebook_auth"
-        case .sighInGoogle: return "/users/google_auth"
-        case .sighInApple: return "/users/apple_auth"
-        case .createAccount: return "/users"
-        case .forgotPassword: return "/users/recover_password"
-        case .logout: return "/users/logout"
+        case .sighIn: return "users/login"
+        case .sighInFacebook: return "users/facebook_auth"
+        case .sighInGoogle: return "uers/google_auth"
+        case .sighInApple: return "users/apple_auth"
+        case .createAccount: return "users"
+        case .forgotPassword: return "users/recover_password"
+        case .logout: return "users/logout"
             
         //MARK: - Dashboard
+            
+        // MARK: - Others
+        case .registerToken: return "devices"
+        case .appVersion: return "minimum_version"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .forgotPassword: return .put
+        case .appVersion: return .get
         case .logout: return .delete
         default: return .post
         }
@@ -93,61 +102,61 @@ extension APITarget: TargetType {
     var task: Task {
         switch self {
             
-        case .sighIn(let params):
+        case .sighIn(let email, let password, let token):
             var bodyParams: [String: Any] = [
-                "email": params.email,
-                "password": params.password,
+                "email": email,
+                "password": password,
                 "platform": "ios"
             ]
             
-            if let token = params.token {
+            if let token = token {
                 bodyParams["token"] = token
             }
             
-            return Task.requestParameters(parameters: bodyParams, encoding: JSONEncoding())
+            return .requestParameters(parameters: bodyParams, encoding: JSONEncoding())
             
-        case .sighInFacebook(let params):
+        case .sighInFacebook(let facebookToken, let firebaseToken):
             var bodyParams: [String: Any] = [
-                "facebook_token": params.facebookToken,
+                "facebook_token": facebookToken,
                 "platform": "ios"
             ]
             
-            if let token = params.firebaseToken {
+            if let token = firebaseToken {
                 bodyParams["token"] = token
             }
             
-            return Task.requestParameters(parameters: bodyParams, encoding: JSONEncoding())
+            return .requestParameters(parameters: bodyParams, encoding: JSONEncoding())
             
-        case .sighInGoogle(let params):
+        case .sighInGoogle(let googleToken, let firebaseToken):
             var bodyParams: [String: Any] = [
-                "google_token": params.googleToken,
+                "google_token": googleToken,
                 "platform": "ios"
             ]
             
-            if let token = params.firebaseToken {
+            if let token = firebaseToken {
                 bodyParams["token"] = token
             }
             
-            return Task.requestParameters(parameters: bodyParams, encoding: JSONEncoding())
+            return .requestParameters(parameters: bodyParams, encoding: JSONEncoding())
             
-        case .sighInApple(let params):
+        case .sighInApple(let email, let fullName, let firebaseToken):
             var bodyParams: [String: Any] = [
                 "platform": "ios"
             ]
             
-            if let email = params.email {
+            if let email = email {
                 bodyParams["email"] = email
             }
             
-            if let fullName = params.fullName {
+            if let fullName = fullName {
                 bodyParams["full_name"] = fullName
             }
             
-            if let token = params.firebaseToken {
+            if let token = firebaseToken {
                 bodyParams["token"] = token
             }
             
-            return Task.requestParameters(parameters: bodyParams, encoding: JSONEncoding())
+            return .requestParameters(parameters: bodyParams, encoding: JSONEncoding())
             
         case .createAccount(let request):
             if let multipart = request.toMultiPartIfNeeded() {
@@ -157,10 +166,16 @@ extension APITarget: TargetType {
             return .requestParameters(parameters: request.toJSON(), encoding: JSONEncoding())
             
         case .forgotPassword(let email):
-            return Task.requestParameters(parameters: ["email": email], encoding: JSONEncoding())
+            return .requestParameters(parameters: ["email": email], encoding: JSONEncoding())
+            
+        case .registerToken(let token):
+            return .requestParameters(parameters: ["token": token, "platform": "ios"], encoding: JSONEncoding())
+            
+        case .appVersion:
+            return .requestParameters(parameters: ["platform": "ios"], encoding: URLEncoding())
             
         default:
-            return Task.requestPlain
+            return .requestPlain
         }
     }
 }

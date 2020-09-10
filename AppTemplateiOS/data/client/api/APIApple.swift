@@ -29,7 +29,7 @@ extension APIApple: APIAppleProtocol {
         
         return Single.create(subscribe: { [weak self] (single) -> Disposable in
             guard let self = self else {
-                single(.error(APIClient.error(description: R.string.localizable.loginGoogleGenericError())))
+                single(.error(APIClient.error(description: R.string.localizable.loginAppleGenericError()))) 
                 return Disposables.create()
             }
 

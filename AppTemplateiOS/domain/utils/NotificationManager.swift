@@ -12,12 +12,12 @@ final class NotificationManager {
     static let shared = NotificationManager()
 
     // MARK: - Update Profile
-    private let newImagePickingSubject = PublishSubject<(PhotoPickerType, UIImage)>()
-    lazy var newImagePicking: Observable<(PhotoPickerType, UIImage)> = {
+    private let newImagePickingSubject = PublishSubject<(PhotoPickerOrigin, UIImage)>()
+    lazy var newImagePicking: Observable<(PhotoPickerOrigin, UIImage)> = {
         return newImagePickingSubject
     }()
     
-    func pickingImage(_ type: PhotoPickerType, image: UIImage) {
+    func pickingImage(_ type: PhotoPickerOrigin, image: UIImage) {
         newImagePickingSubject.onNext((type, image))
     }
 }
